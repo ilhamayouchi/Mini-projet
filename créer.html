@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="créer.css">
+       
+        <title>Formulaire de Création de Concours</title>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar-header">
+                <img src="Ecole normale supérieur.png" alt="Logo">
+            </div>
+            <ul class="nav">
+                <li><a href="#">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="#">Concours</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="créer.html">Créer un concours</a></li>
+                        <li><a href="#">Mes concours</a></li>
+                        <li><a href="#">Gérer les concours</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Résultats</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Profil</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Déconnexion</a></li>
+            </ul>
+        </nav>
+        <section>
+            <div class="container mt-5">
+                
+                <p id="p">Formulaire de Création de Concours</p>
+        
+                <!-- Form Structure -->
+                <form id="form-creation">
+                    <!-- Form fields -->
+                    <div class="form-group">
+                        <label for="titre">Titre du Concours</label>
+                        <input type="text" id="titre" class="form-control" placeholder="Big Data" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="categorie">Catégorie du Concours</label>
+                        <input type="text" id="categorie" class="form-control" placeholder="Informatique" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="lieu">Lieu du Concours</label>
+                        <input type="text" id="lieu" class="form-control" placeholder="Ecole Normale Supérieure" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="date-debut">Date de Début du Concours</label>
+                        <input type="date" id="date-debut" class="form-control" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="date-fin">Date de Fin du Concours</label>
+                        <input type="date" id="date-fin" class="form-control" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="limite">Limite de Participants</label>
+                        <input type="number" id="limite" class="form-control" placeholder="ex: 500" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="description">Description du Concours</label>
+                        <textarea id="description" class="form-control" placeholder="Décrivez le concours" required></textarea>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="criteres">Critères d'Éligibilité</label>
+                        <textarea id="criteres" class="form-control" placeholder="Exemples de critères d'éligibilité" required></textarea>
+                    </div>
+        
+                    <button type="submit" id="submit" class="btn btn-primary mt-3">Créer le Concours</button>
+                </form>
+        
+                
+                <div id="error-message" class="alert alert-danger mt-3" style="display: none;">
+                    Tous les champs doivent être remplis !
+                </div>
+            </div>
+            
+ </section>
+        <footer>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/yourprofile" target="_blank">
+                    <img src="facebook_1384021.png" alt="Facebook" class="footer-social-icon">
+                </a>
+                <a href="https://twitter.com/yourprofile" target="_blank">
+                    <img src="twitter_254406.png" alt="Twitter" class="footer-social-icon">
+                </a>
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+                    <img src="linkedin_3991642.png" alt="LinkedIn" class="footer-social-icon">
+                </a>
+            </div>
+            <div class="footer-text">
+                <p>&copy; 2024 Tous les droits sont réservés | <a href="#">Contact</a> | <a href="#">Gestion de Cookies</a></p>
+            </div>
+        </footer>
+        <script src="créer.js" ></script>
+    </body>
+</html>
