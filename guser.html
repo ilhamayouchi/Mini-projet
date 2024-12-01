@@ -5,146 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion des Utilisateurs</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="styleshet" href="style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">Mon Site</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="role.html">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="menu.html"> menu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="role.html">Déconnexion</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    
+    <div class="container">
+        <h1>Gestion des Utilisateurs</h1>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#modalAjouterUtilisateur">Ajouter un Utilisateur</button>
+        <table class="table table-striped mt-3">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nom</th>
+                    <th>Email</th>
+                    <th>Rôle</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Liste des utilisateurs ici -->
+                <tr>
+                    <td>1</td>
+                    <td>Jean Dupont</td>
+                    <td>jean@example.com</td>
+                    <td>Organisateur</td>
+                    <td>
+                        <button class="btn btn-warning">Modifier</button>
+                        <button class="btn btn-danger">Supprimer</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-<div class="container">
-    <h1 class="text-center">Gestion des Utilisateurs</h1>
-
-    <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#addUserModal">Ajouter un Utilisateur</button>
-
-  
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nom</th>
-                <th>Email</th>
-                <th>Rôle</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody id="userTable">
-          
-            <tr>
-                <td>1</td>
-                <td>EL KHATTAB IKRAM</td>
-                <td>I.elkhatt@gmail.com</td>
-                <td>Administrateur</td>
-                <td>
-                    <button class="btn btn-warning" onclick="editUser(1)">Modifier</button>
-                    <button class="btn btn-danger" onclick="deleteUser(1)">Supprimer</button>
-                </td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>ESSAYOUTI Atiqa</td>
-                <td>a.essayouti@gmail.com</td>
-                <td>Organisateur</td>
-                <td>
-                    <button class="btn btn-warning" onclick="editUser(2)">Modifier</button>
-                    <button class="btn btn-danger" onclick="deleteUser(2)">Supprimer</button>
-                </td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>AI ilhame</td>
-                <td>a.ilhame@gmail.com</td>
-                <td>Organisateur</td>
-                <td>
-                    
-                    <button class="btn btn-warning" onclick="editUser(3)">Modifier</button>
-                    <button class="btn btn-danger" onclick="deleteUser(3)">Supprimer</button>
-                </td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Maryame Curie</td>
-                <td>m.curie@gmail.com</td>
-                <td>Participant</td>
-                <td>
-                    <button class="btn btn-warning" onclick="editUser(4)">Modifier</button>
-                    <button class="btn btn-danger" onclick="deleteUser(4)">Supprimer</button>
-                </td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Ali lipoo</td>
-                <td>marie@gmail.com</td>
-                <td>Organisateur</td>
-                <td>
-                    <button class="btn btn-warning" onclick="editUser(2)">Modifier</button>
-                    <button class="btn btn-danger" onclick="deleteUser(2)">Supprimer</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-
-<div class="modal fade" id="addUserModal" tabindex="-1" role="dialog" aria-labelledby="addUserModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="addUserModalLabel">Ajouter un Utilisateur</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form id="addUserForm">
-                    <div class="form-group">
-                        <label for="userName">Nom</label>
-                        <input type="text" class="form-control" id="userName" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="userEmail">Email</label>
-                        <input type="email" class="form-control" id="userEmail" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="userRole">Rôle</label>
-                        <select class="form-control" id="userRole" required>
-                            <option value="Administrateur">Administrateur</option>
-                            <option value="Organisateur">Organisateur</option>
-                            <option value="Participant">Participant</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Ajouter</button>
-                </form>
+    <!-- Modal pour ajouter un utilisateur -->
+    <div class="modal fade" id="modalAjouterUtilisateur" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Ajouter un Utilisateur</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="nomUtilisateur">Nom</label>
+                            <input type="text" class="form-control" id="nomUtilisateur" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="emailUtilisateur">Email</label>
+                            <input type="email" class="form-control" id="emailUtilisateur" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="roleUtilisateur">Rôle</label>
+                            <select class="form-control" id="roleUtilisateur">
+                                <option>Administrateur</option>
+                                <option>Organisateur</option>
+                                <option>Participant</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Ajouter</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="script.js">
-   
-</script>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
