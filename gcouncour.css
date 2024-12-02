@@ -178,6 +178,7 @@ footer {
     border-top: 3px solid ; /* Optional styling for separation */
     font-size: 14px;
     font-family: "Montserrat", serif;
+    height: 100%;
 }
 
 .footer-social {
@@ -215,4 +216,8 @@ footer {
 
 .footer-text a:hover {
     color: #ffffff; /* On hover, make links white */
+}
+.he{
+    text-align: center;
+    
 }
