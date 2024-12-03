@@ -1,0 +1,139 @@
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+h2 {
+    text-align: center;
+    color: #444;
+}
+
+/* Tableau des concours */
+#contestTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#contestTable thead {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+#contestTable th, #contestTable td {
+    text-align: left;
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+#contestTable tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#contestTable tbody tr:hover {
+    background-color: #eaeaea;
+    cursor: pointer;
+}
+
+button {
+    padding: 8px 12px;
+    margin: 4px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #0056b3;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #003d80;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button:disabled {
+    background-color: #bbb;
+    cursor: not-allowed;
+}
+
+/* Formulaire de modification */
+#editFormContainer {
+    max-width: 500px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+#editFormContainer h3 {
+    text-align: center;
+    color: #444;
+}
+
+#editFormContainer form {
+    display: flex;
+    flex-direction: column;
+}
+
+#editFormContainer label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+#editFormContainer input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+#editFormContainer input:focus {
+    border-color: #0056b3;
+}
+
+#editFormContainer button {
+    margin-top: 20px;
+    align-self: center;
+}
+
+/* Messages d'information */
+.info-message {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #0056b3;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    body {
+        margin: 10px;
+    }
+
+    #contestTable {
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 6px 8px;
+    }
+
+    #editFormContainer {
+        padding: 10px;
+    }
+}
