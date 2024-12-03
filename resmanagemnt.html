@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head >
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="resmanagemnt.css">
+        <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar-header">
+                <img src="Ecole normale supérieur.png" alt="Logo">
+            </div>
+            <ul class="nav">
+                <li><a href="#">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="#">Concours</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="créer.html">Créer un concours</a></li>
+                        <li><a href="#">Mes concours</a></li>
+                        <li><a href="#">Gérer les concours</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Résultats</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Profil</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Déconnexion</a></li>
+            </ul>
+        </nav>
+        <section>
+            <div class="container mt-5">
+                <h2>Liste des Participants</h2>
+                
+                <table class="table table-bordered" id="datatable">
+                    <thead>
+                        <tr>
+                            <th>Nom Complet</th>
+                            <th>Email</th>
+                            <th>Diplome obtenue</th>
+                            <th>Date et Heure de Soumission</th>
+                            <th>Score / Classement</th>
+                            <th>Statut</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ilham ayouchi</td>
+                            <td>ilhaameayouchi@gmail.com</td>
+                            <td> Licence Informatique</td>
+                            <td>2024-12-01 14:30</td>
+                            <td>85</td>
+                            <td>Validé</td>
+                            <td>
+                                <button class="btn btn-info btn-sm" >Contacter</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Youssef ayouchi</td>
+                            <td>youssefayouchi@gmail.com</td>
+                            <td> Licence Mathématiques</td>
+                            <td>2024-12-01 15:00</td>
+                            <td>90</td>
+                            <td>Validé</td>
+                            <td>
+                                <button class="btn btn-info btn-sm" >Contacter</button>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Amina elamrani</td>
+                            <td>alaindupont@example.com</td>
+                            <td> Licence Informatique</td>
+                            <td>2024-12-01 16:00</td>
+                            <td>76</td>
+                            <td>En attente</td>
+                            <td>
+                                <button class="btn btn-info btn-sm" >Contacter</button>
+                               
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ayoub hanafi</td>
+                            <td>marielaurent@example.com</td>
+                            <td> Licence Informatique</td>
+                            <td>2024-12-01 16:30</td>
+                            <td>63</td>
+                            <td>Refusé</td>
+                            <td>
+                                <button class="btn btn-info btn-sm" >Contacter</button>
+                                
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button id="btnexportcsv" type="button">Telecharger CSV fichier</button>
+                <button id="publish" type="button">Publier les résultats </button>
+                <script src="tablecsv.js"></script>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/yourprofile" target="_blank">
+                    <img src="facebook_1384021.png" alt="Facebook" class="footer-social-icon">
+                </a>
+                <a href="https://twitter.com/yourprofile" target="_blank">
+                    <img src="twitter_254406.png" alt="Twitter" class="footer-social-icon">
+                </a>
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+                    <img src="linkedin_3991642.png" alt="LinkedIn" class="footer-social-icon">
+                </a>
+            </div>
+            <div class="footer-text">
+                <p>&copy; 2024 Tous les droits sont réservés | <a href="#">Contact</a> | <a href="#">Gestion de Cookies</a></p>
+            </div>
+        </footer>
+    </body>
+</html>
