@@ -1,89 +1,92 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Administrateur</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            background-color: #f8f9fa;
-        }
-        .container {
-            margin-top: 50px;
-        }
-        .card {
-            margin-bottom: 20px;
-        }
-    </style>
+    <title>Menu</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-        <a class="navbar-brand" href="#">Mon Site</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Restaurant</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="role.html">Accueil</a>
+                    <a class="nav-link active" href="#">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="guser.html">Concours</a>
+                    <a class="nav-link" href="#">Menu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="resultats.html">Résultats</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="role.html">Déconnexion</a>
+                    <a class="nav-link" href="#">Contact</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
-<div class="container">
-    <h1 class="text-center">Menu Administrateur</h1>
+
+<!-- Header Section -->
+<header class="bg-light py-5 text-center">
+    <div class="container">
+        <h1 class="display-4">Découvrez notre Menu d'Administrateur</h1>
+        <p class="lead">"Bienvenue sur le tableau de bord de l'administrateur, où vous pouvez gérer toutes les fonctionnalités de votre site en toute simplicité."</p>
+    </div>
+</header>
+
+<!-- Categories Section -->
+<section class="container py-5">
+    <h2 class="text-center mb-4">"Voici les tâches !"</h2>
+
     <div class="row">
         <div class="col-md-4">
             <div class="card text-center">
-                <div class="card-header bg-primary text-white">
-                    Gestion des Utilisateurs
-                </div>
+                <img src="gestionut.png" class="card-img-top" alt="Entrées">
                 <div class="card-body">
-                    <p>Créez, modifiez ou supprimez des utilisateurs.</p>
-                    <a href="guser.html" class="btn btn-primary">Accéder</a>
+                    <h5 class="card-title">Gestion de Utilisateur</h5>
+                    
+                    <a href="guser.html" class="btn btn-primary">Voir plus</a>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
             <div class="card text-center">
-                <div class="card-header bg-success text-white">
-                    Gestion des Concours
-                </div>
+                <img src="gestioncon.png" class="card-img-top" alt="Plats">
                 <div class="card-body">
-                    <p>Créez et gérez des concours.</p>
-                    <a href="gcouncour.html" class="btn btn-success">Accéder</a>
+                    <h5 class="card-title">Gestion de Concour</h5>
+                  
+                    <a href="gcouncour.html" class="btn btn-primary">Voir plus</a>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
             <div class="card text-center">
-                <div class="card-header bg-warning text-white">
-                    Gestion des Résultats
-                </div>
+                <img src="gestionres.png" class="card-img-top" alt="Desserts">
                 <div class="card-body">
-                    <p>Saisissez et publiez les résultats des concours.</p>
-                    <a href="gestion_resultats.html" class="btn btn-warning">Accéder</a>
+                    <h5 class="card-title">Gestion de Resultats</h5>
+                
+                    <a href="#" class="btn btn-primary">Voir plus</a>
                 </div>
             </div>
         </div>
-    
     </div>
-</div>
+</section>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Menu Items Section -->
+
+
+<!-- Footer -->
+<footer class="bg-primary text-white text-center py-3">
+    <p>&copy; 2024 Restaurant. Tous droits réservés.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
