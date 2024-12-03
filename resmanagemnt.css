@@ -1,0 +1,59 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+
+        h2 {
+            color: #343a40;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #6c757d;
+            color: white;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+
+        .btn {
+            margin-right: 5px;
+        }
+
+#btnexportcsv, #publish {
+    margin-top: 20px;
+    margin-right: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hover effect only for "Publier" and "Export CSV" buttons */
+#btnexportcsv:hover, #publish:hover {
+    background-color: #0056b3;
+}
+
+
+
