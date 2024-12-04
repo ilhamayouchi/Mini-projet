@@ -222,3 +222,12 @@ footer {
     text-align: center;
     
 }
+.hR{
+    text-align: center;
+    color: red;
+}
+.notif{
+    background-color: #abd0e0;
+ 
+    border: solid;
+}

@@ -6,32 +6,48 @@
     <title>Menu</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="gcouncour.css">
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Restaurant</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Accueil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Menu</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
-        </div>
+<nav class="navbar">
+    <div class="navbar-header">
+        <img src="Ecole normale supérieur.png" alt="Logo">
     </div>
+    <ul class="nav">
+        <li><a href="#">Accueil</a></li>
+        
+        <li class="dropdown">
+            <a href="#">Connexion</a>
+            <ul class="dropdown-menu">
+                <li><a href="connexion.html">connexion</a></li>
+                <li><a href="connexion.html">déconnexion</a></li>
+        
+            </ul>
+            </li>
+        <li><a href="menu.html">les taches</a></li>
+    
+            <li class="dropdown">
+                <a href="#">Concours</a>
+                <ul class="dropdown-menu">
+                    <li><a href="gcouncour.html"> concours</a></li>
+                    <li><a href="gcouncour.html">Mes concours</a></li>
+                    <li><a href="gcouncour.html">Gérer les concours</a></li>
+                </ul>
+                </li>
+                <li class="dropdown">
+            <a href="#">Resultats</a>
+            <ul class="dropdown-menu">
+                <li><a href="menuR.html">Categories</a></li>
+                <li><a href="resultat.html">de concour prg</a></li>
+                <li><a href="#">de concour cuisine</a></li>
+            </ul>
+        </li>
+        
+  
+    </ul>
 </nav>
-
 <!-- Header Section -->
 <header class="bg-light py-5 text-center">
     <div class="container">
@@ -71,7 +87,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Gestion de Resultats</h5>
                 
-                    <a href="#" class="btn btn-primary">Voir plus</a>
+                    <a href="menuR.html" class="btn btn-primary">Voir plus</a>
                 </div>
             </div>
         </div>
@@ -81,10 +97,60 @@
 <!-- Menu Items Section -->
 
 
-<!-- Footer -->
-<footer class="bg-primary text-white text-center py-3">
-    <p>&copy; 2024 Restaurant. Tous droits réservés.</p>
+<footer>
+    <div class="footer-social">
+        <a href="https://www.facebook.com/yourprofile" target="_blank">
+            <img src="facebook_1384021.png" alt="Facebook" class="footer-social-icon">
+        </a>
+        <a href="https://twitter.com/yourprofile" target="_blank">
+            <img src="twitter_254406.png" alt="Twitter" class="footer-social-icon">
+        </a>
+        <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+            <img src="linkedin_3991642.png" alt="LinkedIn" class="footer-social-icon">
+        </a>
+    </div>
+    <div class="footer-text">
+        <p>&copy; 2024 Tous les droits sont réservés | <a href="#">Contact</a> | <a href="#">Gestion de Cookies</a></p>
+    </div>
 </footer>
+
+<div class="container">
+
+
+</div>
+
+<div class="modal fade" id="addUserModal" tabindex="-1" role="dialog" aria-labelledby="addUserModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="addUserModalLabel">Ajouter un Utilisateur</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form id="addUserForm">
+            <div class="form-group">
+                <label for="userName">titre de concour</label>
+                <input type="text" class="form-control" id="userName" required>
+            </div>
+            <div class="form-group">
+                <label for="userEmail">Catégorie</label>
+                <input type="email" class="form-control" id="userEmail" required>
+            </div>
+            <div class="form-group">
+                <label for="userRole">Rôle</label>
+                <select class="form-control" id="userRole" required>
+                    <option value="Administrateur">programtion</option>
+                    <option value="Organisateur">cuisine</option>
+                    <option value="Participant">Management</option>
+                </select>
+           
+        </form>
+    </div>
+</div>
+</div>
+</div>
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
