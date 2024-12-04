@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Déterminer le Rôle de l'Utilisateur</title>
+    <title>Choisir un Rôle</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="gcouncour.css">
 </head>
 <body>
 
@@ -46,47 +47,45 @@
         </ul>
     </nav>
 
-<div class="container mt-5">
-    <h2 class="text-center">Déterminer Votre Rôle</h2>
-    <form id="roleForm">
-        <div class="form-group">
-            <label for="role">Sélectionnez votre rôle :</label>
-            <select class="form-control" id="role" required>
-                <option value="">Choisissez un rôle</option>
-                <option value="admin">Administrateur</option>
-                <option value="partic">Participant</option>
-                <option value="orga">Organisateur</option>
-            </select>
+    <div class="container mt-5">
+        <h2 class="text-center">Choisir Votre Rôle</h2>
+        <form id="roleForm">
+            <div class="form-group">
+                <label for="role">Sélectionnez votre rôle :</label>
+                <select class="form-control" id="role" required>
+                    <option value="">Choisissez un rôle</option>
+                    <option value="admin">Administrateur</option>
+                    <option value="participant">Participant</option>
+                    <option value="organisateur">Organisateur</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-success btn-block">Valider le Rôle</button>
+        </form>
+        <div class="text-center mt-3">
+            <a href="#" class="btn btn-link">Retour</a>
         </div>
-        <button type="submit" class="btn btn-primary btn-block">Déterminer le Rôle</button>
-    </form>
-    <div class="text-center mt-3">
-        <a href="#">Retour</a>
     </div>
-</div>
 
-<script>
-    document.getElementById('roleForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        const selectedRole = document.getElementById('role').value;
-        
-        if (selectedRole) {
-            if (selectedRole === 'admin') {
-                
-                window.location.href = 'connexion.html';
+    <script>
+        document.getElementById('roleForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const selectedRole = document.getElementById('role').value;
+            
+            if (selectedRole) {
+                if (selectedRole === 'admin') {
+                    window.location.href = 'connexion.html';
+                } else {
+                    alert('Votre rôle est : ' + selectedRole);
+                }
             } else {
-                alert('Votre rôle est : ' + selectedRole);
-                
+                alert('Veuillez sélectionner un rôle.');
             }
-        } else {
-            alert('Veuillez sélectionner un rôle.');
-        }
-    });
-</script>
+        });
+    </script>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>
