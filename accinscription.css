@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+.body{
+    font-family: "Montserrat", serif;
+ }
+/* Form styles */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajoute une ombre pour un effet de profondeur */
+    border-radius: 10px; /* Bordures arrondies */
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.registration-form .form-group {
+    margin-bottom: 20px;
+}
+
+.registration-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.registration-form input,
+.registration-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Bordures arrondies */
+    font-size: 16px;
+}
+
+.registration-form input:focus,
+.registration-form select:focus {
+    border-color:#9D3E3F; /* Couleur de la bordure lors du focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.5); /* Ajoute une ombre pour un effet de focus */
+}
+
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    background-color:#9D3E3F;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px; /* Bordures arrondies */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color:#9D3E3F;
+}
