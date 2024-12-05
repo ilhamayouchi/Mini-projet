@@ -1,59 +1,81 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            color: #212529;
-        }
+h2 {
+    color: #343a40;
+    margin-bottom: 20px;
+}
 
-        h2 {
-            color: #343a40;
-            margin-bottom: 20px;
-        }
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-        .container {
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        table {
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #6c757d;
-            color: white;
-        }
-
-        tbody tr:nth-child(odd) {
-            background-color: #f2f2f2;
-        }
-
-        tbody tr:nth-child(even) {
-            background-color: #ffffff;
-        }
-
-        .btn {
-            margin-right: 5px;
-        }
-
-#btnexportcsv, #publish {
+table {
     margin-top: 20px;
-    margin-right: 10px;
-    background-color: #007bff;
+    text-align: center;
+}
+
+thead {
+    display: table-header-group;
+    visibility: visible;
+    background-color: transparent; /* Aucun fond pour le thead */
+    color: #000; /* Texte en noir */
+    font-weight: bold;
+}
+
+th {
+    background-color: transparent; /* Aucun fond pour les th */
+    color: #000; /* Texte en noir */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.btn {
+    margin-right: 5px;
+}
+
+/* Buttons */
+/* Style global pour les boutons et liens */
+#btnexportcsv, #publish, #contact {
+    margin-top: 20px;
+    margin-right: 20px;
+    background-color: #824114; /* Couleur principale */
     color: white;
+    text-decoration: none; /* Supprimer le soulignement du lien */
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    display: inline-block; /* Assurez-vous que les éléments soient en ligne */
+    text-align: center;
 }
 
-/* Hover effect only for "Publier" and "Export CSV" buttons */
-#btnexportcsv:hover, #publish:hover {
-    background-color: #0056b3;
+/* Hover effect pour les boutons et le lien */
+#btnexportcsv:hover, #publish:hover, #contact:hover {
+    background-color: #703311; /* Teinte plus foncée */
 }
+
+/* Effet actif au clic */
+#btnexportcsv:active, #publish:active, #contact:active {
+    transform: scale(0.98); /* Réduction au clic */
+}
+
+
+
+
 
 
 

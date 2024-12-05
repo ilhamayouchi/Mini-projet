@@ -23,8 +23,8 @@ h2 {
 }
 
 #contestTable thead {
-    background-color: #0056b3;
-    color: #fff;
+    color: #333;  /* Texte noir */
+    background-color: transparent; /* Pas de couleur de fond */
 }
 
 #contestTable th, #contestTable td {
@@ -42,19 +42,20 @@ h2 {
     cursor: pointer;
 }
 
+/* Boutons */
 button {
     padding: 8px 12px;
     margin: 4px;
     font-size: 14px;
     color: #fff;
-    background-color: #0056b3;
+    background-color: #824114; /* Couleur de fond pour les boutons */
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #003d80;
+    background-color: #703311; /* Couleur plus foncée sur hover */
 }
 
 button:active {
@@ -102,7 +103,7 @@ button:disabled {
 }
 
 #editFormContainer input:focus {
-    border-color: #0056b3;
+    border-color: #824114; /* Correspond à la couleur des boutons */
 }
 
 #editFormContainer button {
@@ -115,7 +116,7 @@ button:disabled {
     margin: 20px 0;
     text-align: center;
     font-size: 16px;
-    color: #0056b3;
+    color: #824114; /* Couleur de texte correspondant aux boutons */
 }
 
 /* Responsiveness */

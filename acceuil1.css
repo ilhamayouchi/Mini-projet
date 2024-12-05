@@ -69,7 +69,7 @@
     padding: 60px 20px;
     text-align: center;
     height: 100vh; /* Prend toute la hauteur de la fenêtre */
-    background-image: url("image.png");
+    background-image: url("Capture\ d\'écran\ 2024-12-05\ 022715.png");
     background-position: center center; /* Centrer l'image */
     background-size: cover; /* Couvre toute la section */
     background-repeat: no-repeat; /* Eviter la répétition de l'image */
@@ -102,31 +102,3 @@
     flex: 0.4;
 }
 
-/* Footer styles */
-footer {
-    background-color: #f8f9fa;
-    padding: 20px 0;
-}
-
-.footer-social {
-    margin-bottom: 10px;
-}
-
-.footer-social-icon {
-    width: 30px;
-    height: auto;
-}
-
-.footer-text {
-    font-size: 14px;
-    color: #777;
-}
-
-.footer-text a {
-    text-decoration: none;
-    color: #007bff;
-}
-
-.footer-text a:hover {
-    text-decoration: underline;
-}

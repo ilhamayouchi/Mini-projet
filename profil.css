@@ -4,7 +4,7 @@ body, html {
     padding: 0;
     height: 100%;
     font-family: Arial, sans-serif;
-    background-color: #fff; /* Set the global background color to white */
+    background-color: #fff; 
 }
 
 /* Profile Section */
@@ -14,7 +14,7 @@ body, html {
     align-items: center;
     min-height: 100vh;
     padding: 20px;
-    background-color: #6FC2E9; /* Sky blue background applied only to this section */
+    background-color: white; 
 }
 
 .profile-container {
@@ -75,11 +75,21 @@ body, html {
     margin: 10px;
 }
 
+/* Button styles */
 .button-edit {
-    background-color: #007bff;
+    background-color: #824114; /* Use your specified color */
     color: white;
 }
 
 .button-edit:hover {
-    background-color: #0056b3;
+    background-color: #703311; /* Darker shade on hover */
+}
+
+.button-edit:active {
+    transform: scale(0.98); /* Slightly shrink the button when clicked */
+}
+
+.button-edit:disabled {
+    background-color: #bbb;
+    cursor: not-allowed;
 }

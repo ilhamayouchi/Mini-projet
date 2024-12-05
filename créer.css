@@ -1,16 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
     font-family: "Montserrat", serif;
-    background-color: #E0F7FF; /* La même couleur que dans index.css */
+    background-color: white; /* La couleur de fond de la page */
     padding: 20px;
 }
+
 #p {
     font-family: "Montserrat", serif;
-    text-align: center; /* Centers the text */
+    text-align: center; /* Center the text */
     font-size: 24px; /* Optional: Adjust font size */
     font-weight: bold; /* Optional: Make the text bold */
     margin-bottom: 20px; /* Optional: Add some space below */
 }
+
 form {
     max-width: 600px;
     margin: 0 auto;
@@ -46,13 +49,14 @@ form button {
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    background-color: #0d6efd; /* Couleur de bg-primary */
-    color: #fff;
+    background-color: #824114; /* Couleur du bouton */
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 form button:hover {
-    background-color: #0056b3; /* Couleur légèrement plus foncée au survol */
+    background-color: #703311; /* Teinte plus foncée pour le survol */
 }
+

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 .body{
-    font-family: "Montserrat", serif;
-}
+    font-family: "Montserrat", serif;}
+/* Navbar container */
 .navbar {
     background-color: white; /* Légèrement plus coloré */
     padding: 20px 40px;
@@ -19,13 +19,15 @@
     display: flex;
     justify-content: center;
 }
+
+/* Navbar header image */
 .navbar-header img {
     height: 60px;
     width: auto;
     margin: 0;
     padding: 0;
     display: block;
-    vertical-align : middle;
+    vertical-align: middle;
 }
 
 /* Navbar list items */
@@ -46,19 +48,20 @@
     padding: 5px 10px;
     text-decoration: none;
     display: block;
+    border-radius: 4px; /* Optional: Adds rounded corners */
 }
 
-/* Hover effect for links */
+/* Hover effect for navbar links */
 .nav li a:hover {
-    background-color: #D6F4FF; /* Surbrillance douce */
-    border-radius: 4px;
+    background-color: #824114; /* Darker color on hover */
+    color: white; /* White text when hovered */
 }
 
 /* Dropdown menu (hidden by default) */
 .nav .dropdown-menu {
     font-family: "Montserrat", serif;
     display: none;
-    background-color: #AEE8FA;
+    background-color: white;
     position: absolute;
     padding: 10px 0;
     list-style-type: none;
@@ -66,6 +69,7 @@
     border-radius: 4px;
     left: 0;
     top: 100%;
+    width: 200px; /* Adjust the width as needed */
 }
 
 /* Show dropdown when hovering over the parent list item */
@@ -81,10 +85,10 @@
     font-family: "Montserrat", serif;
 }
 
-/* Hover effect for dropdown links */
+/* Hover effect for dropdown items */
 .nav .dropdown-menu li a:hover {
-    background-color: #6FC2E9;
-    color: white;
+    background-color: #824114; /* Background color when hovering over dropdown items */
+    color: white; /* Change text color to white */
 }
 
 /* Icon size adjustments */
@@ -93,18 +97,19 @@
     font-size: 18px;
 }
 
+
 .Bienvenue {
     padding: 20px 30px;
     margin-bottom: 20px;
     font-size: 16px;
-    background-color: #F0F8FF; /* Inchangé */
+    background-color:#824114; /* Inchangé */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-family: "Montserrat", serif;
 }
 
 .Concours {
-    background-color: #E0F7FF;
+    background-color: #9D3E3F;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -143,22 +148,6 @@
     margin-bottom: 10px;
     font-family: "Montserrat", serif;
 }
-
-button {
-    padding: 10px 16px;
-    font-size: 14px;
-    color: #fff;
-    background-color:#55C86E ;
-    font-family: "Montserrat", serif;
-    border-radius:18px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #55C86E;
-}
-
 footer {
     background-color: #9D3E3F; /* Dark background for contrast */
     color: white;
