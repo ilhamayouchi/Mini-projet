@@ -35,13 +35,13 @@ function validateForm() {
 
     // Rediriger vers la page appropriée selon le type de compte
     if (accountType === "administrateur") {
-        window.location.href = "admin.html"; // Remplacez par la page de l'administrateur
+        window.location.href = "menu.hmtl"; // Remplacez par la page de l'administrateur
         return false;
     } else if (accountType === "organisateur") {
         window.location.href = "index.html"; // Remplacez par la page de l'organisateur
         return false;
     } else if (accountType === "participant") {
-        window.location.href = "participant.html"; // Remplacez par la page du participant
+        window.location.href = "acces.html"; // Remplacez par la page du participant
         return false;
     }
 

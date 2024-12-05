@@ -33,6 +33,4 @@ document.getElementById('form-creation').onsubmit = function(event) {
         alert("Le concours a été créé avec succès !");
     }
 }
-
-
-
+    
