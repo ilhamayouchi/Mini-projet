@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="gcouncour.css">
+    <title>Formulaire d'Inscription</title>
+    <style>
+        .form-container {
+            padding: 20px;
+        }
+        .co{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-header">
+            <img src="Ecole normale supérieur.png" alt="Logo">
+        </div>
+        <ul class="nav">
+            <li><a href="#">Accueil</a></li>
+            
+            <li class="dropdown">
+                <a href="#">Connexion</a>
+                <ul class="dropdown-menu">
+                    <li><a href="connexion.html">connexion</a></li>
+                    <li><a href="connexion.html">déconnexion</a></li>
+            
+                </ul>
+                </li>
+            <li><a href="menu.html">les taches</a></li>
+        
+                <li class="dropdown">
+                    <a href="#">Concours</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="gcouncour.html"> concours</a></li>
+                        <li><a href="gcouncour.html">Mes concours</a></li>
+                        <li><a href="gcouncour.html">Gérer les concours</a></li>
+                    </ul>
+                    </li>
+                    <li class="dropdown">
+                <a href="#">Resultats</a>
+                <ul class="dropdown-menu">
+                    <li><a href="menuR.html">Categories</a></li>
+                    <li><a href="resultat.html">de concour prg</a></li>
+                    <li><a href="#">de concour cuisine</a></li>
+                </ul>
+            </li>
+            
+      
+        </ul>
+    </nav>
+
+<div class="container mt-5">
+    <div class="card mb-12 mx-auto" style="max-width: 70%;">
+        <div class="row g-0">
+            <div class="col-md-3">
+                <br>
+                <br>
+                <br>
+                <br>
+                <img src="INSC.png" class="img-fluid rounded-start" alt="Illustration">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h2 class="co">Connexion Administrateur</h2>
+                    <div class="form-container">
+                        
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Nom</label>
+                                <input type="text" class="form-control" id="name" placeholder="Entrez votre nom" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" class="form-control" id="email" placeholder="Entrez votre e-mail" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Mot de passe</label>
+                                <input type="password" class="form-control" id="password" placeholder="Entrez votre mot de passe" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary" onclick="window.location.href='menu.html'" >Connexion</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<footer>
+    <div class="footer-social">
+        <a href="https://www.facebook.com/yourprofile" target="_blank">
+            <img src="facebook_1384021.png" alt="Facebook" class="footer-social-icon">
+        </a>
+        <a href="https://twitter.com/yourprofile" target="_blank">
+            <img src="twitter_254406.png" alt="Twitter" class="footer-social-icon">
+        </a>
+        <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+            <img src="linkedin_3991642.png" alt="LinkedIn" class="footer-social-icon">
+        </a>
+    </div>
+    <div class="footer-text">
+        <p>&copy; 2024 Tous les droits sont réservés | <a href="#">Contact</a> | <a href="#">Gestion de Cookies</a></p>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

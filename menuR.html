@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head >
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="gcouncour.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar-header">
+                <img src="Ecole normale supérieur.png" alt="Logo">
+            </div>
+            <ul class="nav">
+                <li><a href="#">Accueil</a></li>
+                
+                <li class="dropdown">
+                    <a href="#">Connexion</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="connexion.html">connexion</a></li>
+                        <li><a href="connexion.html">déconnexion</a></li>
+                
+                    </ul>
+                    </li>
+                <li><a href="menu.html">les taches</a></li>
+            
+                    <li class="dropdown">
+                        <a href="#">Concours</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="gcouncour.html"> concours</a></li>
+                            <li><a href="gcouncour.html">Mes concours</a></li>
+                            <li><a href="gcouncour.html">Gérer les concours</a></li>
+                        </ul>
+                        </li>
+                        <li class="dropdown">
+                    <a href="#">Resultats</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="menuR.html">Categories</a></li>
+                        <li><a href="resultats.html">de concour prg</a></li>
+                        <li><a href="#">de concour Management</a></li>
+                    </ul>
+                </li>
+                
+          
+            </ul>
+        </nav>
+        
+        <section>
+            <div class="Bienvenue">
+                <H1>"Résultats par Catégorie"</H1>
+                <p>"Explorez les résultats des concours triés par catégorie. Choisissez
+                    une catégorie ci-dessous pour voir les performances des participants.</p>
+                
+            </div>
+            <div> 
+            
+            <div class="Concours">
+                <div class="C1">
+                    <div class="desc-image">
+                        <img class="image" src="respr.png" alt="Concours Image">
+                    </div>
+                    <div class="div-desc">
+                        <p><strong>Concour de programtion oriente objet</strong></p>
+                        <p>Catégorie: informatique</p>
+                        <p>01/08/2023 
+                            <br>
+                            10:00 AM
+                        </p>
+                        <p>Statut:disponible</p>
+                    </div>
+                    <tr>
+                        <br>
+                    <td>
+                        <a href="resultats.html" class="btn btn-primary">Voir plus</a>
+                    </td>
+                </tr>
+                </div>
+                <div class="C2">
+                    <div class="desc-image">
+                        <img class="image" src="recu.png" alt="Concours Image">
+                    </div>
+                    <div class="div-desc">
+                        <p><strong> Santé Publique et Gestion des Hôpitaux</strong></p>
+                        <p>Catégorie: Santé</p>
+                        <p>01/12/2024 <br>
+                            12:00 AM
+                            B
+                        
+                        </p>
+                        <p>Statut: indesponible</p>
+                    </div>
+                    <td>
+
+                        <BR>
+                        
+
+                        <a href="indisponible.html" class="btn btn-secondary">Voir plus </a>
+
+                    </td>
+                </tr>
+                </div>
+                <div class="C3">
+                    <div class="desc-image">
+                        <img class="image" src="resmg.png" alt="Concours Image">
+                    </div>
+                    <div class="div-desc">
+                        <BR></BR>
+                        <p><strong>Management des Systèmes Electriques Intelligents</strong></p>
+                        <p>Catégorie: Management</p>
+                        <p>01/12/2024 <br>
+                         08:30 AM</p>
+                        <p>Statut:disponible</p>
+                    </div>
+                    <td>
+                       <a href="resultats.html" class="btn btn-primary">Voir plus</a>
+                    </td>
+                </tr>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/yourprofile" target="_blank">
+                    <img src="facebook_1384021.png" alt="Facebook" class="footer-social-icon">
+                </a>
+                <a href="https://twitter.com/yourprofile" target="_blank">
+                    <img src="twitter_254406.png" alt="Twitter" class="footer-social-icon">
+                </a>
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+                    <img src="linkedin_3991642.png" alt="LinkedIn" class="footer-social-icon">
+                </a>
+            </div>
+            <div class="footer-text">
+                <p>&copy; 2024 Tous les droits sont réservés | <a href="#">Contact</a> | <a href="#">Gestion de Cookies</a></p>
+            </div>
+        </footer>
+        
+<div class="container">
+ 
+    
+    </div>
+        
+<div class="modal fade" id="addUserModal" tabindex="-1" role="dialog" aria-labelledby="addUserModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addUserModalLabel">Ajouter un Utilisateur</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="addUserForm">
+                    <div class="form-group">
+                        <label for="userName">titre de concour</label>
+                        <input type="text" class="form-control" id="userName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="userEmail">Catégorie</label>
+                        <input type="email" class="form-control" id="userEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="userRole">Rôle</label>
+                        <select class="form-control" id="userRole" required>
+                            <option value="Administrateur">programtion</option>
+                            <option value="Organisateur">cuisine</option>
+                            <option value="Participant">Management</option>
+                        </select>
+                   
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js">
+   
+    </body>
+</html>

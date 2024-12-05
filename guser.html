@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Utilisateurs</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="gcouncour.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-header">
+            <img src="Ecole normale supérieur.png" alt="Logo">
+        </div>
+        <ul class="nav">
+            <li><a href="#">Accueil</a></li>
+            
+            <li class="dropdown">
+                <a href="#">Connexion</a>
+                <ul class="dropdown-menu">
+                    <li><a href="connexion.html">connexion</a></li>
+                    <li><a href="connexion.html">déconnexion</a></li>
+            
+                </ul>
+                </li>
+            <li><a href="menu.html">les taches</a></li>
+        
+                <li class="dropdown">
+                    <a href="#">Concours</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="gcouncour.html"> concours</a></li>
+                        <li><a href="gcouncour.html">Mes concours</a></li>
+                        <li><a href="gcouncour.html">Gérer les concours</a></li>
+                    </ul>
+                    </li>
+                    <li class="dropdown">
+                <a href="#">Resultats</a>
+                <ul class="dropdown-menu">
+                    <li><a href="menuR.html">Categories</a></li>
+                    <li><a href="resultat.html">de concour prg</a></li>
+                    <li><a href="#">de concour cuisine</a></li>
+                </ul>
+            </li>
+            
+      
+        </ul>
+    </nav>
+   
+    <div> 
+    <div class="container">
+        <h1 class="he">Gestion des Utilisateurs</h1> <div class="Bienvenue">
+                
+            <p>les listes des utilisateurs disponible.</p>
+           
+        <button class="btn btn-primary" data-toggle="modal" data-target="#modalAjouterUtilisateur">Ajouter un Utilisateur</button>
+        <table class="table table-striped mt-3" id="userTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nom</th>
+                    <th>Email</th>
+                    <th>Rôle</th>
+                    <th>Actions</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>EL KHATTAB IKRAM</td>
+                    <td>I.elkhatt@gmail.com</td>
+                    <td>Administrateur</td>
+                    <td>
+                        <button class="btn btn-warning" onclick="editUser(1)">Modifier</button>
+                        <button class="btn btn-danger" onclick="deleteUser(1)">Supprimer</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>ESSAYOUTI Atiqa</td>
+                    <td>a.essayouti@gmail.com</td>
+                    <td>Organisateur</td>
+                    <td>
+                        <button class="btn btn-warning" onclick="editUser(2)">Modifier</button>
+                        <button class="btn btn-danger" onclick="deleteUser(2)">Supprimer</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>AI ilhame</td>
+                    <td>a.ilhame@gmail.com</td>
+                    <td>Organisateur</td>
+                    <td>
+                        
+                        <button class="btn btn-warning" onclick="editUser(3)">Modifier</button>
+                        <button class="btn btn-danger" onclick="deleteUser(3)">Supprimer</button>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Liste des utilisateurs ici -->
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <div class="footer-social">
+            <a href="https://www.facebook.com/yourprofile" target="_blank">
+                <img src="facebook_1384021.png" alt="Facebook" class="footer-social-icon">
+            </a>
+            <a href="https://twitter.com/yourprofile" target="_blank">
+                <img src="twitter_254406.png" alt="Twitter" class="footer-social-icon">
+            </a>
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+                <img src="linkedin_3991642.png" alt="LinkedIn" class="footer-social-icon">
+            </a>
+        </div>
+        <div class="footer-text">
+            <p>&copy; 2024 Tous les droits sont réservés | <a href="#">Contact</a> | <a href="#">Gestion de Cookies</a></p>
+        </div>
+    </footer>
+    <!-- Modal pour ajouter un utilisateur -->
+    <div class="modal fade" id="modalAjouterUtilisateur" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">Ajouter un Utilisateur</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="userForm">
+                        <input type="hidden" id="userId">
+                        <div class="form-group">
+                            <label for="nomUtilisateur">Nom</label>
+                            <input type="text" class="form-control" id="nomUtilisateur" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="emailUtilisateur">Email</label>
+                            <input type="email" class="form-control" id="emailUtilisateur" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="roleUtilisateur">Rôle</label>
+                            <select class="form-control" id="roleUtilisateur">
+                                <option>Administrateur</option>
+                                <option>Organisateur</option>
+                                <option>Participant</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Ajouter</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        let users = [];
+        let editUserId = null;
+
+        document.getElementById('userForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const userId = document.getElementById('userId').value;
+            const userName = document.getElementById('nomUtilisateur').value;
+            const userEmail = document.getElementById('emailUtilisateur').value;
+            const userRole = document.getElementById('roleUtilisateur').value;
+
+            if (editUserId === null) {
+                // Ajout d'un nouvel utilisateur
+                const newUser = {
+                    id: users.length + 1,
+                    name: userName,
+                    email: userEmail,
+                    role: userRole
+                };
+                users.push(newUser);
+            } else {
+                // Modification d'un utilisateur existant
+                const user = users.find(u => u.id === parseInt(editUserId));
+                user.name = userName;
+                user.email = userEmail;
+                user.role = userRole;
+                editUserId = null;
+            }
+
+            // Réinitialiser le formulaire et mettre à jour la table
+            this.reset();
+            updateUserTable();
+            $('#modalAjouterUtilisateur').modal('hide');
+        });
+
+        function updateUserTable() {
+            const userTableBody = document.querySelector('#userTable tbody');
+            userTableBody.innerHTML = '';
+            users.forEach(user => {
+                userTableBody.innerHTML += `
+                    <tr>
+                        <td>${user.id}</td>
+                        <td>${user.name}</td>
+                        <td>${user.email}</td>
+                        <td>${user.role}</td>
+                        <td>
+                            <button class="btn btn-warning" onclick="editUser(${user.id})">Modifier</button>
+                            <button class="btn btn-danger" onclick="deleteUser(${user.id})">Supprimer</button>
+                        </td>
+                    </tr>
+                `;
+            });
+        }
+
+        function editUser(id) {
+            const user = users.find(u => u.id === id);
+            document.getElementById('nomUtilisateur').value = user.name;
+            document.getElementById('emailUtilisateur').value = user.email;
+            document.getElementById('roleUtilisateur').value = user.role;
+            document.getElementById('userId').value = user.id;
+            editUserId = id;
+            document.getElementById('modalTitle').textContent = 'Modifier un Utilisateur';
+            $('#modalAjouterUtilisateur').modal('show');
+        }
+
+        function deleteUser(id) {
+            users = users.filter(user => user.id !== id);
+            updateUserTable();
+        }
+    </script>
+</body>
+</html>
