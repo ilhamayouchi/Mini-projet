@@ -25,7 +25,7 @@
     margin: 0;
     padding: 0;
     display: block;
-    vertical-align: middle;
+    vertical-align : middle;
 }
 
 /* Navbar list items */
@@ -160,7 +160,7 @@ button:hover {
 }
 
 footer {
-    background-color: #2C3E50; /* Dark background for contrast */
+    background-color: #9D3E3F; /* Dark background for contrast */
     color: white;
     text-align: center;
     padding: 20px 10px;
@@ -197,7 +197,7 @@ footer {
 }
 
 .footer-text a {
-    color: #8FE1FF; /* Link color */
+    color:black; /* Link color */
     text-decoration: none;
     transition: color 0.3s ease;
 }
