@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform des Concours - Inscription</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+   <style>
+      
+    
+      .nav{
+            background-color: darkseagreen;
+            
+        }
+        .nav-item {
+            margin-left: 20px;  /* Espacement entre les boutons */
+            padding: 10px 20px;  /* Espacement à l'intérieur des boutons */
+            border-radius: 50px;  /* Bordures arrondies */
+            font-weight: bold;  /* Texte en gras */
+            transition: background-color 0.3s ease;  /* Transition pour l'effet au survol */
+        }
+
+        /* Changer la couleur des boutons au survol */
+        .nav-item:hover {
+            background-color: #4CAF50; /* Vert plus foncé */
+            color: white;
+        }
+
+        /* Aligner les liens à gauche */
+        #nav {
+            background-color: darkseagreen;
+            display: flex;
+            justify-content: right;
+            gap: 15px;
+           
+        }
+        #foot{
+            background-color: darkseagreen;
+            font-size: larger;
+            font-weight: bold;
+        }
+        #info{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Card body */
+.card-body {
+    padding: 2rem;
+    background-color: #ffffff;
+}
+.mb-4 strong {
+        color: #4CAF50;
+    }
+/* Title styling */
+h5, h4 {
+    color: #2d3e50;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* User info section */
+/* Results list styling */
+.list-group-item {
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #ffffff;
+    font-size: 1rem;
+}
+
+/* Buttons styling */
+.btn-valide {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+    border-radius: 25px;
+}
+
+.btn-valide:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+    border-radius: 25px;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+/* Flex styling for button and item content */
+.list-group-item .d-flex {
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Small buttons margins */
+.btn-sm {
+    padding: 0.4rem 0.8rem;
+}
+
+/* Small margins between buttons */
+.me-2 {
+    margin-right: 0.5rem;
+}
+
+/* Optional: Hover effect for the list item text */
+.list-group-item:hover {
+    background-color: #f1f1f1;
+}
+#titreconc{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
+#logoimag{
+            width: 20%;
+            height: 50%;
+        }
+
+   </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg" id="nav">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="Capture d'écran 2024-12-04 222214.png" id="logoimag"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto"> <!-- Classe ms-auto pour aligner à droite -->
+                    <li class="nav-item"><a href="acces.html" class="nav-link text-dark">Accueil</a></li>
+                    <li class="nav-item"><a href="concours.html" class="nav-link text-dark">Concours</a></li>
+                    <li class="nav-item"><a href="inscription.html" class="nav-link text-dark">Inscription</a></li>
+                    <li class="nav-item"><a href="resultat.html" class="nav-link text-dark">Resultats</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+        
+    
+        <!-- Section principale -->
+        <main class="container my-5">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <!-- Informations utilisateur -->
+                    <div class="d-flex align-items-center mb-4">
+                        
+                        <div class="mb-4" id="info">
+                            <p><strong>CNE : </strong>J3468235</p>
+                            <p><strong>Nom :</strong> EL KHATTAB</p>
+                            <p><strong>Prénom :</strong> Ikram</p>
+                            <p><strong>Email :</strong> i.elkhattab9162@uca.ma.ac</p>
+                            <p><strong>Niveau :</strong> Bac Scientifique - PC (Physique-Chimie)</p>
+                        </div>
+                    </div>
+                    <!-- Liste des concours -->
+                    <h5 class="mb-3">Les concours auxquels vous êtes inscrit :</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center" id="titreconc">
+                            "Défis de la Matière : Concours de Modélisation Physique"
+                            <div>
+                                <button class="btn btn-success btn-sm me-2 btn-valide" data-title="Défis de la Matière">
+                                    Valide
+                                </button>
+                                <button class="btn btn-danger btn-sm btn-delete" data-title="Défis de la Matière">
+                                    Supprimer
+                                </button>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center" id="titreconc">
+                            "Innovations en Chimie Verte : Défi pour un Avenir Sain"
+                            <div>
+                                <button class="btn btn-success btn-sm me-2 btn-valide" data-title="Innovations en Chimie Verte">
+                                    Valide
+                                </button>
+                                <button class="btn btn-danger btn-sm btn-delete" data-title="Innovations en Chimie Verte">
+                                    Supprimer
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    
+        
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            // Afficher un message au clic sur "Télécharger"
+            document.querySelectorAll('.btn-valide').forEach(button => {
+                button.addEventListener('click', function () {
+                    const concours = this.getAttribute('data-title');
+                    alert(`Vous avez valide votre choix sur le "${concours}" lancé !`);
+                });
+            });
+        
+            // Afficher un message au clic sur "Supprimer" et supprimer l'élément
+            document.querySelectorAll('.btn-delete').forEach(button => {
+                button.addEventListener('click', function () {
+                    const concours = this.getAttribute('data-title');
+                    alert(`Inscription au concours "${concours}" supprimée !`);
+                    
+                    // Retirer l'élément de la liste
+                    const listItem = this.closest('li'); // Trouver l'élément <li> contenant le bouton
+                    listItem.remove(); // Supprimer cet élément de la liste
+                });
+            });
+        </script>
+        
+    </body>
+    </html>
+    
+
+
+
+
+    
+    <footer>
+        <div class="footer-social">
+            <a href="https://www.facebook.com/yourprofile" target="_blank">
+                <img src="facebook_1384021.png" alt="Facebook" class="footer-social-icon">
+            </a>
+            <a href="https://twitter.com/yourprofile" target="_blank">
+                <img src="twitter_254406.png" alt="Twitter" class="footer-social-icon">
+            </a>
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+                <img src="linkedin_3991642.png" alt="LinkedIn" class="footer-social-icon">
+            </a>
+        </div>
+        <div class="footer-text">
+            <p>&copy; 2024 Tous les droits sont réservés | <a href="#">Contact</a> | <a href="#">Gestion de Cookies</a></p>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
