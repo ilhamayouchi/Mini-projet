@@ -1,0 +1,58 @@
+/* General section styling */
+#res {
+    padding: 20px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+
+/* Grid layout for categories */
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Individual category styling */
+.category {
+    text-decoration: none;
+    color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect for categories */
+.category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Category image styling */
+.category img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Title styling inside the category */
+.category-title {
+    padding: 15px;
+    background-color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: #555;
+    border-top: 1px solid #ddd;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .category img {
+        height: 150px;
+    }
+
+    .category-title {
+        font-size: 14px;
+    }
+}

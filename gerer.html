@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head >
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="gerer.css">
+        <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar-header">
+                <img src="Ecole normale supérieur.png" alt="Logo">
+            </div>
+            <ul class="nav">
+                <li><a href="index.html">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="#">Concours</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="créer.html">Créer un concours</a></li>
+                        <li><a href="gerer.html">Gérer les concours</a></li>
+                    </ul>
+                </li>
+                <li><a href="Resultat.html">Résultats</a></li>
+                <li><a href="profil.html"><span class="glyphicon glyphicon-user"></span> Profil</a></li>
+                <li><a href="logout.html"><span class="glyphicon glyphicon-log-out"></span> Déconnexion</a></li>
+            </ul>
+        </nav>
+        <section>
+    <h2>Gestion des Concours</h2>
+    
+    <!-- Tableau des Concours -->
+    <table id="contestTable" border="1">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Catégorie</th>
+                <th>Date</th>
+                <th>Statut</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Les concours seront affichés ici -->
+        </tbody>
+    </table>
+
+    <!-- Formulaire de modification (masqué au départ) -->
+    <div id="editFormContainer" style="display: none;">
+        <h3>Modifier le Concours</h3>
+        <form id="editContestForm">
+            <label for="editName">Nom :</label>
+            <input type="text" id="editName" required><br>
+            <label for="editCategory">Catégorie :</label>
+            <input type="text" id="editCategory" required><br>
+            <label for="editDate">Date :</label>
+            <input type="text" id="editDate" required><br>
+            <label for="editStatus">Statut :</label>
+            <input type="text" id="editStatus" required><br>
+            <button type="submit">Enregistrer les modifications</button>
+            <button type="button" id="cancelEdit">Annuler</button>
+        </form>
+    </div>
+
+    <script src="gestionConcours.js"></script>
+
+
+        </section>
+
+        <footer>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/yourprofile" target="_blank">
+                    <img src="facebook_1384021.png" alt="Facebook" class="footer-social-icon">
+                </a>
+                <a href="https://twitter.com/yourprofile" target="_blank">
+                    <img src="twitter_254406.png" alt="Twitter" class="footer-social-icon">
+                </a>
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+                    <img src="linkedin_3991642.png" alt="LinkedIn" class="footer-social-icon">
+                </a>
+            </div>
+            <div class="footer-text">
+                <p>&copy; 2024 Tous les droits sont réservés | <a href="#">Contact</a> | <a href="#">Gestion de Cookies</a></p>
+            </div>
+        </footer>
+        
+    </body>
+</html>

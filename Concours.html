@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform des Concours - Concours</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+   <style>
+       form {
+            max-width: 600px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="date"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+  
+    
+        .nav{
+            background-color: darkseagreen;
+            
+        }
+        .nav-item {
+            margin-left: 20px;  /* Espacement entre les boutons */
+            padding: 10px 20px;  /* Espacement à l'intérieur des boutons */
+            border-radius: 50px;  /* Bordures arrondies */
+            font-weight: bold;  /* Texte en gras */
+            transition: background-color 0.3s ease;  /* Transition pour l'effet au survol */
+        }
+
+        /* Changer la couleur des boutons au survol */
+        .nav-item:hover {
+            background-color: #4CAF50; /* Vert plus foncé */
+            color: white;
+        }
+
+        /* Aligner les liens à gauche */
+        #nav {
+            background-color: darkseagreen;
+            display: flex;
+            justify-content: right;
+            gap: 15px;
+           
+        }
+        #foot{
+            background-color: darkseagreen;
+            font-size: larger;
+            font-weight: bold;
+        }
+        
+    /* Style de la section */
+    #licence {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #f4f4f9;
+        border-radius: 10px;
+    }
+    #master{
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #f4f4f9;
+        border-radius: 10px;
+    }
+    #doctorat{
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #f4f4f9;
+        border-radius: 10px;
+    }
+    
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #4CAF50;
+    }
+
+    /* Style du tableau */
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .table thead {
+        background-color: #4CAF50;
+        color: rgb(0, 0, 0);
+    }
+
+    .table th, .table td {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .table tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    .table tbody tr:hover {
+        background-color: #e1f5e1;
+    }
+
+    .table img {
+        max-width: 80px;
+        border-radius: 5px;
+    }
+
+    .text-danger {
+        color: #f44336;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .text-danger:hover {
+        color: #d32f2f;
+        text-decoration: underline;
+    }
+    #logoimag{
+            width: 20%;
+            height: 50%;
+    }
+    #logoeco{
+        width: 100%;
+        
+    }
+    #cate{
+        font-weight: bold;
+    }
+
+    /* Pour une meilleure lisibilité sur mobile */
+    @media (max-width: 768px) {
+        .table {
+            font-size: 14px;
+        }
+
+        .table th, .table td {
+            padding: 10px;
+        }
+    }
+
+
+
+   </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg" id="nav">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="Capture d'écran 2024-12-04 222214.png" id="logoimag"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto"> <!-- Classe ms-auto pour aligner à droite -->
+                    <li class="nav-item"><a href="acces.html" class="nav-link text-dark">Accueil</a></li>
+                    <li class="nav-item"><a href="concours.html" class="nav-link text-dark">Concours</a></li>
+                    <li class="nav-item"><a href="inscription.html" class="nav-link text-dark">Inscription</a></li>
+                    <li class="nav-item"><a href="resultat.html" class="nav-link text-dark">Resultats</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="container my-5" id="bg">
+        <section id="licence">
+        <h1>Concours de l'acces au Licence:</h1><br>
+        <table class="table table-bordered text-center">
+            <thead class="table-light">
+                <tr>
+                    <th>Établissement</th>
+                    <th>Catégorie</th>
+                    <th>Titre</th>
+                    <th>Date</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="ensa.png" alt="Logo 1" id="logoeco"></td>
+                    <td id="cate">Informatique</td>
+                    <td>"AlgoMasters : Concours d'Algorithmes et de Résolution de Problèmes"</td>
+                    <td>2/07/2024<br>8h à 12h</td>
+                    <td><a href="#" class="text-danger" data-bs-toggle="modal" data-bs-target="#popup1">Lien d'inscription</a></td>
+                </tr>
+                <tr>
+                    <td><img src="eco.png" alt="Logo 1" id="logoeco"></td>
+                    <td id="cate">Économie</td>
+                    <td>"Youth & Finance : Concours de Simulation Boursière pour Étudiants"</td>
+                    <td>20/06/2024<br>8h à 12h</td>
+                    <td><a href="#" class="text-danger" data-bs-toggle="modal" data-bs-target="#popup1">Lien d'inscription</a></td>
+                </tr>
+                <tr>
+                    <td><img src="sml.png" alt="Logo 1" id="logoeco"></td>
+                    <td id="cate">Chimie</td>
+                    <td>"Mondes Moléculaires : Concours d'Exploration et d'Analyses Chimiques"</td>
+                    <td>5/07/2024<br>8h à 12h</td>
+                    <td><a href="#" class="text-danger" data-bs-toggle="modal" data-bs-target="#popup1">Lien d'inscription</a></td>
+                </tr>
+                <tr>
+                    <td><img src="FLSH.png" alt="Logo 1" id="logoeco"></td>
+                    
+                    <td id="cate">Culture</td>
+                    <td>"Cultures en Dialogue : Concours de Projets pour la Diversité Culturelle"</td>
+                    <td>10/07/2024<br>8h à 12h</td>
+
+                    <td><a href="#" class="text-danger" data-bs-toggle="modal" data-bs-target="#popup1">Lien d'inscription</a></td>
+                </tr>
+                <tr>
+                    <td><img src="sml.png" alt="Logo 1" id="logoeco"></td>
+                    <td id="cate">Physique</td>
+                    <td>"Physique Lab : Concours de mécanique quantique"</td>
+                    <td>5/07/2024<br>8h à 12h</td>
+                    <td><a href="#" class="text-danger" data-bs-toggle="modal" data-bs-target="#popup1">Lien d'inscription</a></td>
+                </tr>
+                <tr>
+                    <td><img src="ens.png" alt="Logo 1" id="logoeco"></td>
+                    <td id="cate">Science d'éducation </td>
+                    <td>"Les étoiles de l'éducation : Concours de projets innovants en pédagogie numérique"</td>
+                    <td>6/07/2024<br>9h à 12h</td>
+                    <td><a href="#" class="text-danger" data-bs-toggle="modal" data-bs-target="#popup1">Lien d'inscription</a></td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </section>
+    <section id="master">
+        <h1>Concours de l'acces au Master:</h1><br>
+        <table class="table table-bordered text-center">
+            <thead class="table-light">
+                <tr>
+                    <th>Établissement</th>
+                    <th>Catégorie</th>
+                    <th>Titre</th>
+                    <th>Date</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="fst.jpg" alt="Logo 1" id="logoeco"></td>
+                    <td id="cate">Informatique</td>
+                    <td>"Devenez développeur : concours Master en Ingénierie Logicielle"</td>
+                    <td>2/07/2024<br>8h à 12h</td>
+                    <td><a href="#" class="text-danger" data-bs-toggle="modal" data-bs-target="#popup2">Lien d'inscription</a></td>
+                </tr>
+                <tr>
+                    <td><img src="logo-encg-marrakech.jpg" alt="Logo 1" id="logoeco"></td>
+                    <td id="cate">Économie</td>
+                    <td>"Le Master en droit des affaires : votre passeport pour les grandes entreprises marocaines."</td>
+                    <td>20/06/2024<br>8h à 12h</td>
+                    <td><a href="#" class="text-danger" data-bs-toggle="modal" data-bs-target="#popup2">Lien d'inscription</a></td>
+                </tr>
+                <tr>
+                    <td><img src="sml.png" alt="Logo 1" id="logoeco"></td>
+                    <td id="cate">Chimie</td>
+                    <td>"Concours d'accès au Master en Chimie : Innovation et Développement Durable"</td>
+                    <td>5/07/2024<br>8h à 12h</td>
+                    <td><a href="#" class="text-danger" data-bs-toggle="modal" data-bs-target="#popup2">Lien d'inscription</a></td>
+                </tr>
+                <tr>
+                    <td><img src="FLSH.png" alt="Logo 1" id="logoeco"></td>
+                    
+                    <td id="cate">Culture</td>
+                    <td>"Devenez expert en patrimoine : concours Master en Histoire de l'Art"</td>
+                    <td>10/07/2024<br>8h à 12h</td>
+                    <td><a href="#" class="text-danger" data-bs-toggle="modal" data-bs-target="#popup2">Lien d'inscription</a></td>
+                </tr>
+                <tr>
+                    <td><img src="fst.jpg" alt="Logo 1" id="logoeco"></td>
+                    <td id="cate">Physique</td>
+                    <td>"Concours pour le Master en Physique Nucléaire : énergie de demain"</td>
+                    <td>5/07/2024<br>8h à 12h</td>
+                    <td><a href="#" class="text-danger" data-bs-toggle="modal" data-bs-target="#popup2">Lien d'inscription</a></td>
+                </tr>
+                <tr>
+                    <td><img src="ens.png" alt="Logo 1" id="logoeco"></td>
+                    <td id="cate">Science d'éducation </td>
+                    <td>"Devenez enseignant-chercheur : concours Master en Didactique"</td>
+                    <td>6/07/2024<br>9h à 12h</td>
+                    <td><a href="#" class="text-danger" data-bs-toggle="modal" data-bs-target="#popup2">Lien d'inscription</a></td>
+                </tr><tr>
+                    <td><img src="sml.png" alt="Logo 1" id="logoeco"></td>
+                    <td id="cate">Science de vie et terre </td>
+                    <td>"Concours pour le Master en Biochimie : la vie au niveau moléculaire"</td>
+                    <td>6/07/2024<br>9h à 12h</td>
+                    <td><a href="#" class="text-danger" data-bs-toggle="modal" data-bs-target="#popup2">Lien d'inscription</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section id="doctorat">
+        <h1>Concours de l'acces au Doctorat:</h1><br>
+        <table class="table table-bordered text-center">
+            <thead class="table-light">
+                <tr>
+                    <th>Établissement</th>
+                    <th>Catégorie</th>
+                    <th>Titre</th>
+                    <th>Date</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="FLSH.png" alt="Logo 1" id="logoeco"></td>
+                    <td id="cate">Arts et lettres</td>
+                    <td>"Doctorat en littérature française : explorer les classiques et les contemporains"</td>
+                    <td>4/07/2024<br>8h à 12h</td>
+                    <td><a href="#" class="text-danger" data-bs-toggle="modal" data-bs-target="#popup3">Lien d'inscription</a></td>
+                </tr>
+                <tr>
+                    <td><img src="eco.png" alt="Logo 1" id="logoeco"></td>
+                    <td id="cate">Sciences économiques et de gestion</td>
+                    <td>"Le doctorat en marketing : comprendre les comportements des consommateurs"</td>
+                    <td>23/06/2024<br>8h à 12h</td>
+                    <td><a href="#" class="text-danger" data-bs-toggle="modal" data-bs-target="#popup3">Lien d'inscription</a></td>
+                </tr>
+                <tr>
+                    <td><img src="sml.png" alt="Logo 1" id="logoeco"></td>
+                    <td id="cate">Sciences exactes et de la vie</td>
+                    <td>"Concours d'accès au doctorat en physique : les mystères de l'univers à portée de main"</td>
+                    <td>5/07/2024<br>8h à 12h</td>
+                    <td><a href="#" class="text-danger" data-bs-toggle="modal" data-bs-target="#popup3">Lien d'inscription</a></td>
+                </tr>
+                <tr>
+                    <td><img src="ens.png" alt="Logo 1" id="logoeco"></td>   
+                    <td id="cate">Sciences humaines et sociales</td>
+                    <td>"Doctorat en sciences de l'éducation : innover pour un enseignement de qualité"</td>
+                    <td>12/05/2024<br>8h à 12h</td>
+                    <td><a href="#" class="text-danger" data-bs-toggle="modal" data-bs-target="#popup3">Lien d'inscription</a></td>
+                </tr> 
+            </tbody>
+        </table>
+    </section>
+    </main>
+
+    <!-- Popup avec formulaire -->
+    <div class="modal fade" id="popup1" tabindex="-1" aria-labelledby="popup1Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="popup1Label">Inscription </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="cne" class="form-label">CNE</label>
+                            <input type="text" class="form-control" id="cne" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="nom" class="form-label">Nom</label>
+                            <input type="text" class="form-control" id="nom" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="prenom" class="form-label">Prénom</label>
+                            <input type="text" class="form-control" id="prenom" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="dateNaissance" class="form-label">Date de Naissance</label>
+                            <input type="date" class="form-control" id="dateNaissance" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Adresse Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Entrez votre email" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="niveauEtude" class="form-label">Niveau d'Études</label>
+                            <select class="form-select" id="niveauEtude" required>
+                                <option value="" selected disabled>Choisir...</option>
+                                <option value="Bac Scientifique - Maths A">Bac Scientifique - Maths A</option>
+                                <option value="Bac Scientifique - Maths B">Bac Scientifique - Maths B</option>
+                                <option value="Bac Scientifique - PC (Physique-Chimie)">Bac Scientifique - PC (Physique-Chimie)</option>
+                                <option value="Bac Scientifique - SVT">Bac Scientifique - SVT</option>
+                                <option value="Bac Économique">Bac Économique</option>
+                                <option value="Bac Lettres Modernes">Bac Lettres Modernes</option>
+                                <option value="Bac Techniques - Gestion">Bac Techniques - Gestion</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Soumettre</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="popup2" tabindex="-1" aria-labelledby="popup1Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="popup1Label">Inscription </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="cne" class="form-label">CNE</label>
+                            <input type="text" class="form-control" id="cne" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="nom" class="form-label">Nom</label>
+                            <input type="text" class="form-control" id="nom" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="prenom" class="form-label">Prénom</label>
+                            <input type="text" class="form-control" id="prenom" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="dateNaissance" class="form-label">Date de Naissance</label>
+                            <input type="date" class="form-control" id="dateNaissance" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Adresse Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Entrez votre email" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="niveauEtude" class="form-label">Niveau d'Études</label>
+                            <select class="form-select" id="niveauEtude" required>
+                                <option value="" selected disabled>Choisir...</option>
+                                <option value="Licence en Informatique">Licence en Informatique</option>
+                                <option value="Licence en Physique">Licence en Physique</option>
+                                <option value="Licence en Chimie">Licence en Chimie</option>
+                                <option value="Licence en Mathématiques">Licence en Mathématiques</option>
+                                <option value="Licence en Biologie">Licence en Biologie</option>
+                                <option value="Licence en Économie et Gestion">Licence en Économie et Gestion</option>
+                                <option value="Licence en Droit">Licence en Droit</option>
+                                
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Soumettre</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="popup3" tabindex="-1" aria-labelledby="popup1Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="popup1Label">Inscription </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="cne" class="form-label">CNE</label>
+                            <input type="text" class="form-control" id="cne" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="nom" class="form-label">Nom</label>
+                            <input type="text" class="form-control" id="nom" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="prenom" class="form-label">Prénom</label>
+                            <input type="text" class="form-control" id="prenom" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="dateNaissance" class="form-label">Date de Naissance</label>
+                            <input type="date" class="form-control" id="dateNaissance" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Adresse Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Entrez votre email" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="niveauEtude" class="form-label">Niveau d'Études</label>
+                            <select class="form-select" id="niveauEtude" required>
+                                <option value="" selected disabled>Choisir...</option>
+                                <option value="Master en Intelligence Artificielle">Master en Intelligence Artificielle</option>
+                                <option value="Master en Physique Appliquée">Master en Physique Appliquée</option>
+                                <option value="Master en Chimie Verte">Master en Chimie Verte</option>
+                                <option value="Master en Gestion de Projet">Master en Gestion de Projet</option>
+                            </select>
+                            
+                        </div>
+                        <button type="submit" class="btn btn-primary">Soumettre</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+
+    <footer>
+        <div class="footer-social">
+            <a href="https://www.facebook.com/yourprofile" target="_blank">
+                <img src="facebook_1384021.png" alt="Facebook" class="footer-social-icon">
+            </a>
+            <a href="https://twitter.com/yourprofile" target="_blank">
+                <img src="twitter_254406.png" alt="Twitter" class="footer-social-icon">
+            </a>
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+                <img src="linkedin_3991642.png" alt="LinkedIn" class="footer-social-icon">
+            </a>
+        </div>
+        <div class="footer-text">
+            <p>&copy; 2024 Tous les droits sont réservés | <a href="#">Contact</a> | <a href="#">Gestion de Cookies</a></p>
+        </div>
+    </footer>
+    <script>
+        
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
