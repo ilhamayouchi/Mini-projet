@@ -10,7 +10,7 @@
 <body>
     <nav class="navbar">
         <div class="navbar-header">
-            <img src="Ecole normale supérieur.png" alt="Logo">
+            <img src="Capture d'écran 2024-12-04 222214.png" alt="Logo">
         </div>
         <ul class="nav">
             <li><a href="#">Accueil</a></li>
@@ -36,8 +36,8 @@
                     <li class="dropdown">
                 <a href="#">Resultats</a>
                 <ul class="dropdown-menu">
-                    <li><a href="menuR.html">Categories</a></li>
-                    <li><a href="resultat.html">de concour prg</a></li>
+                    <li><a href="menR.html">Categories</a></li>
+                    <li><a href="res.html">de concour prg</a></li>
                     <li><a href="#">de concour cuisine</a></li>
                 </ul>
             </li>
@@ -47,15 +47,18 @@
     </nav>
    
     <div> 
-    <div class="container">
-        <h1 class="he">Gestion des Utilisateurs</h1> <div class="Bienvenue">
+    <div class="container fluid">
+        <h1 class="he">Gestion des Utilisateurs</h1> 
+        <div class="Bienvenue">
                 
             <p>les listes des utilisateurs disponible.</p>
            
-        <button class="btn btn-primary" data-toggle="modal" data-target="#modalAjouterUtilisateur">Ajouter un Utilisateur</button>
-        <table class="table table-striped mt-3" id="userTable">
+        <button class="btn btn-success" data-toggle="modal" data-target="#modalAjouterUtilisateur">Ajouter un Utilisateur</button>
+       </div>
+        <table class="table table-striped mt-3" id="userTable" >
             <thead>
-                <tr>
+                <div class="">
+                <tr class="Bienvennue">
                     <th>ID</th>
                     <th>Nom</th>
                     <th>Email</th>
@@ -94,6 +97,7 @@
                     </td>
                 </tr>
             </thead>
+        </div>
             <tbody>
                 <!-- Liste des utilisateurs ici -->
             </tbody>
