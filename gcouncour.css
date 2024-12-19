@@ -25,7 +25,7 @@
     margin: 0;
     padding: 0;
     display: block;
-    vertical-align: middle;
+    vertical-align : middle;
 }
 .navbar-nav {
     display: flex;
@@ -78,7 +78,6 @@
 .nav li a:hover {
     background-color:  #032F30;/* Surbrillance douce */
     border-radius: 4px;
-    color:#ffffff
    
 }
 
