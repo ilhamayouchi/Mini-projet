@@ -1,5 +1,6 @@
-document.getElementById('form-creation').onsubmit = function(event) {
-    event.preventDefault(); // Empêche l'envoi du formulaire (rechargement de la page)
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('form-creation').addEventListener('submit', function (event) {
+        event.preventDefault(); // Empêche l'envoi du formulaire
 
     // Récupérer les valeurs des champs du formulaire
     let nom = document.getElementById('titre').value;
@@ -32,5 +33,5 @@ document.getElementById('form-creation').onsubmit = function(event) {
         // Message de confirmation
         alert("Le concours a été créé avec succès !");
     }
-}
-    
+});
+});

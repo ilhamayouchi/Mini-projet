@@ -17,7 +17,7 @@ class TableCsvExport {
                 if (row.children[i] !== undefined) {
                     line += TableCsvExport.parseCell(row.children[i]);
                 }
-                line += (i !== (numCols - 1)) ? "," : "";
+                line += (i !== (numCols - 1)) ? "|" : "";
             }
             lines.push(line);
         }

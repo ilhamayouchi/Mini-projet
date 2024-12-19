@@ -27,6 +27,32 @@
     display: block;
     vertical-align: middle;
 }
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 20px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px;
+    color: #333;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #e95916;
+    text-decoration: underline; /* Ajoute une sous-ligne lors du survol */
+}
+
+.navbar-brand img {
+    border-radius: 8px; /* Ajouter des bords arrondis à l'image du logo */
+}
+
+
 
 /* Navbar list items */
 .nav li {
@@ -50,15 +76,17 @@
 
 /* Hover effect for links */
 .nav li a:hover {
-    background-color: #D6F4FF; /* Surbrillance douce */
+    background-color:  #032F30;/* Surbrillance douce */
     border-radius: 4px;
+    color:#ffffff
+   
 }
 
 /* Dropdown menu (hidden by default) */
 .nav .dropdown-menu {
     font-family: "Montserrat", serif;
     display: none;
-    background-color: #AEE8FA;
+    background-color:#0A7075;
     position: absolute;
     padding: 10px 0;
     list-style-type: none;
@@ -66,6 +94,7 @@
     border-radius: 4px;
     left: 0;
     top: 100%;
+    color: #fff;
 }
 
 /* Show dropdown when hovering over the parent list item */
@@ -83,7 +112,7 @@
 
 /* Hover effect for dropdown links */
 .nav .dropdown-menu li a:hover {
-    background-color: #6FC2E9;
+    background-color:#032F30 ;
     color: white;
 }
 
@@ -95,9 +124,10 @@
 
 .Bienvenue {
     padding: 20px 30px;
+    color: #fff;
     margin-bottom: 20px;
     font-size: 16px;
-    background-color: #F0F8FF; /* Inchangé */
+    background-color:  #032F30 ; /* Inchangé */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-family: "Montserrat", serif;
@@ -105,7 +135,7 @@
 }
 
 .Concours {
-    background-color: #E0F7FF;
+    background-color:#032F30;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -113,6 +143,12 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 
+}
+.menu{
+    background-color: #032F30;
+}
+.tab{
+    background-color: #fff;
 }
 
 .C1, .C2, .C3 {
